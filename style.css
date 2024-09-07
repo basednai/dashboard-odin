@@ -19,6 +19,10 @@
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     display: grid;
+    box-shadow: 1px 1px 1px 2px black;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
 }
 
 .headerTop,
@@ -172,12 +176,13 @@
     /* min-width: 70%; */
     /* min-height: 80%; */
     border-radius: 10px;
-    box-shadow: 1px 1px 4px 0px grey;
+    box-shadow: 1px 2px 4px 0px grey;
     border-left: 8px solid #1c94d3;
-    padding: 20px;
+    padding: 30px;
     /* justify-self: stretch; */
     display: grid;
     grid-template-rows: min-content;
+    overflow: hidden;
 }
 
 .rightBar {
@@ -187,9 +192,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: .4fr 2fr .25fr 4fr;
+    grid-auto-rows: auto;
     align-items: baseline;
-    padding: 0px 20px 20px 20px;
 
+    padding: 0px 20px 20px 20px;
 }
 
 .rightBarRow {
@@ -217,10 +223,6 @@
     margin: 10px 0px;
 }
 
-.trendingContainer {
-    grid-row: 3;
-}
-
 .announceContainer,
 .trendingContainer {
     background-color: white;
@@ -228,9 +230,9 @@
     border-radius: 10px;
     font-size: .75rem;
     font-weight: 300;
-    /* gap: 2rem; */
     padding: 1rem;
-    box-shadow: 1px 1px 4px 0px grey;
+    box-shadow: 1px 2px 4px 0px grey;
+
 }
 
 .announceContainer {
@@ -239,7 +241,8 @@
 
 .trendingContainer {
     grid-row: 4/5;
-    align-self: fle;
+    max-height: 100%;
+    overflow: hidden;;
 }
 
 .rBarHeading {
@@ -257,14 +260,23 @@
 
 .trend {
     padding: 10px 0px;
-    border-bottom: 2px solid #e2e9f1; 
+    /* border-bottom: 2px solid #e2e9f1; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend>img {
+    width: 40px
 }
 
 .trend:last-child {
     border: none;
 }
 
-.cardContent {}
+.cardContent {
+    font-weight: 300;
+}
 
 .cardHeading {
     font-weight: bold;
