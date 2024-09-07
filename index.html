@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -24,27 +25,27 @@
             <div class="header">
                 <div class="headerTop">
                     <div class="htLeft">
-                        <img src="" alt="search icon">
-                        <input type="text" id="searchBar" placeholder="Search bar">
+                        <img src="assets/icons/magnify.svg" alt="search icon">
+                        <input type="text" id="searchBar">
                     </div>
 
                     <div class="htRight">
-                        <img src="" alt="notiIcon">
-                        <img src="" alt="pfp">
+                        <img src="assets/icons/bell-outline.svg" alt="notiIcon" class="noti">
+                        <img src="assets/icons/account-circle.svg" alt="pfp" class="pfp">
                         <div class="username">User Name</div>
                     </div>
                 </div>
                 <div class="headerBottom">
                     <div class="hbLeft">
-                        <img src="" alt="pfp">
+                        <img src="assets/icons/account-circle.svg" alt="pfp" class="pfpLarge">
                         <div class="greeting">
                             <div class="hello">Hi there,</div>
-                            <div class="user">User Name</div>
+                            <div class="user">User Name (@username)</div>
                         </div>
                     </div>
 
                     <div class="hbRight">
-                        <ul>
+                        <ul class="contentBtns">
                             <button>New</button>
                             <button>Upload</button>
                             <button>Share</button>
@@ -54,41 +55,109 @@
             </div>
             <div class="sidebar">
                 <div class="logo">
-                    <img src="" alt="DB Logo">
+                    <img src="assets/icons/square-opacity.svg" alt="DB Logo" class="logo-image">
                     <div class="logoText">Dashboard</div>
                 </div>
                 <ul class="nav">
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
+                    <li id="home">Home</li>
+                    <li id="profile">Profile</li>
+                    <li id="messages">Messages</li>
+                    <li id="history">History</li>
+                    <li id="tasks">Tasks</li>
+                    <li id="communities">Communities</li>
                 </ul>
                 <ul class="resources">
-                    <li>Settings</li>
-                    <li>Support</li>
-                    <li>Privacy</li>
+                    <li id="settings">Settings</li>
+                    <li id="support">Support</li>
+                    <li id="privacy">Privacy</li>
                 </ul>
             </div>
-            <div class="mainContent">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
+            <div class="mainHeaderRow">
+                <div class="cardHeader">Your Projects</div>
             </div>
-            <div class="rightBar">
-                <div class="announcements">
-                    <div class="annHeading">Announcements</div>
-                    <div class="announcementsContent">
-
+            <div class="mainContent">
+                <div class="cards">
+                    <div class="cardHeading"></div>
+                    <div class="cardContent"></div>
+                    <div class="icons"><img src="assets/icons/star-check-outline.svg" alt="star">
+                        <img src="assets/icons/eye-plus-outline.svg" alt="eye">
+                        <img src="assets/icons/source-branch.svg" alt="source">
                     </div>
                 </div>
-                <div class="trending">
-                    <div class="trendHeading">Trending</div>
-                    <div class="trendingContent"></div>
+                <div class="cards">
+                    <div class="cardHeading"></div>
+                    <div class="cardContent"></div>
+                    <div class="icons"><img src="assets/icons/star-check-outline.svg" alt="star">
+                        <img src="assets/icons/eye-plus-outline.svg" alt="eye">
+                        <img src="assets/icons/source-branch.svg" alt="source">
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cardHeading"></div>
+                    <div class="cardContent"></div>
+                    <div class="icons"><img src="assets/icons/star-check-outline.svg" alt="star">
+                        <img src="assets/icons/eye-plus-outline.svg" alt="eye">
+                        <img src="assets/icons/source-branch.svg" alt="source">
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cardHeading"></div>
+                    <div class="cardContent"></div>
+                    <div class="icons"><img src="assets/icons/star-check-outline.svg" alt="star">
+                        <img src="assets/icons/eye-plus-outline.svg" alt="eye">
+                        <img src="assets/icons/source-branch.svg" alt="source">
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cardHeading"></div>
+                    <div class="cardContent"></div>
+                    <div class="icons"><img src="assets/icons/star-check-outline.svg" alt="star">
+                        <img src="assets/icons/eye-plus-outline.svg" alt="eye">
+                        <img src="assets/icons/source-branch.svg" alt="source">
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cardHeading"></div>
+                    <div class="cardContent"></div>
+                    <div class="icons"><img src="assets/icons/star-check-outline.svg" alt="star">
+                        <img src="assets/icons/eye-plus-outline.svg" alt="eye">
+                        <img src="assets/icons/source-branch.svg" alt="source">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="rightBarRow"> -->
+            <!-- </div> -->
+            <div class="rightBar">
+                <div class="rightHeader">Announcements</div>
+                <div class="announceContainer">
+                    <div class="anmt">
+                        <div class="rBarHeading">Lorem, ipsum.</div>
+                        <anmtContent>Lorem ipsum dolor sit amet consectetur adipisicing elit.</anmtContent>
+                    </div>
+                    <div class="anmt">
+                        <div class="rBarHeading">Lorem, ipsum.</div>
+                        <anmtContent>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</anmtContent>
+                    </div>
+                    <div class="anmt">
+                        <div class="rBarHeading">Lorem, ipsum.</div>
+                        <anmtContent>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</anmtContent>
+                    </div>
+                </div>
+                <div class="trendHeader">Trending</div>
+                <div class="trendingContainer">
+                    <div class="trend">
+                        <div class="rBarHeading">Lorem, ipsum.</div>
+                        <trendContent>Lorem ipsum dolor sit amet consectetur adipi sicing elit.</trendContent>
+                    </div>
+                    <div class="trend">
+                        <div class="rBarHeading">Lorem, ipsum.</div>
+                        <trendContent>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</trendContent>
+                    </div>
+                    <div class="trend">
+                        <div class="rBarHeading">Lorem, ipsum.</div>
+                        <trendContent>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</trendContent>
+                    </div>
+
                 </div>
             </div>
         </div>
